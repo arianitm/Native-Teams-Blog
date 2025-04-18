@@ -13,8 +13,8 @@ export default function SearchBar() {
   }
 
   return (
-    <form onSubmit={handleSearch} className="flex justify-center mt-6">
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-2xl mx-auto mb-6 w-full">
+    <form onSubmit={handleSearch} className="flex justify-center">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-2xl mx-auto mb-6 lg:w-lg sm: w-full">
         <input
           type="text"
           value={query}

@@ -14,9 +14,9 @@ export default function Newsletter() {
       <img
         src="/spinner.png"
         alt="Decoration"
-        className="absolute right-50 bottom-15 w-25 h-25 opacity-70 hidden sm:block"
+        className="absolute right-55 bottom-10 w-30 h-30 opacity-70 hidden md:block sm:block"
       />
-      <h3 className="text-3xl font-bold mb-6">
+      <h3 className="text-5xl font-bold mb-6">
         Never miss out our <span className="text-[#4f46e5]">latest news</span>
       </h3>
       {submitted ? (
@@ -24,7 +24,7 @@ export default function Newsletter() {
       ) : (
         <form
           onSubmit={handleSubmit}
-           className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-2xl mx-auto mb-6 w-full"
+           className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto mb-6 w-full"
         >
           <input
             type="email"
@@ -34,13 +34,13 @@ export default function Newsletter() {
           />
           <button
             type="submit"
-            className="bg-[#4f46e5] hover:bg-blue-700 text-white text-sm font-semibold px-8 py-3 rounded-full w-full sm:w-auto"
+            className="bg-[#4f46e5] hover:bg-blue-700 cursor-pointer text-white text-sm font-semibold px-8 py-3 rounded-full w-full sm:w-auto"
           >
             Sign up
           </button>
         </form>
       )}
-      <p className="text-xs text-gray-400 mt-4 max-w-md mx-auto">
+      <p className="text-sm text-white-400 mt-4 max-w-md mx-auto">
         By submitting this form, you will receive emails from Native Teams. For details, view our Privacy Policy.
       </p>
     </div>
