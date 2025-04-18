@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 
-export default function Newsletter() {
+export default function Newsletter({ bg = "dark" }: { bg?: "light" | "dark" }) {
   const [submitted, setSubmitted] = useState(false);
+  const isDark = bg === "dark";
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -10,7 +11,11 @@ export default function Newsletter() {
   }
 
   return (
-    <div className="bg-[#0c0e2c] text-white px-6 py-30 text-center  mx-auto relative overflow-hidden">
+    <div
+      className={`px-6 py-16 rounded-xl text-center max-w-6xl mx-auto mb-20 relative overflow-hidden ${
+        isDark ? "bg-[#0c0e2c] text-white" : "bg-[#EBF3FF] text-gray-900"
+      }`}
+    >
       <img
         src="/spinner.png"
         alt="Decoration"
@@ -24,13 +29,13 @@ export default function Newsletter() {
       ) : (
         <form
           onSubmit={handleSubmit}
-           className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto mb-6 w-full"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto mb-6 w-full"
         >
           <input
             type="email"
             placeholder="Email address"
             required
-           className="flex-1 px-6 py-3 text-sm rounded-full bg-[#f1f3f9] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+            className="flex-1 px-6 py-3 text-sm rounded-full bg-[#f1f3f9] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
           />
           <button
             type="submit"
@@ -41,7 +46,8 @@ export default function Newsletter() {
         </form>
       )}
       <p className="text-sm text-white-400 mt-4 max-w-md mx-auto">
-        By submitting this form, you will receive emails from Native Teams. For details, view our Privacy Policy.
+        By submitting this form, you will receive emails from Native Teams. For
+        details, view our Privacy Policy.
       </p>
     </div>
   );

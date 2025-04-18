@@ -1,6 +1,10 @@
-export default function InfoSection() {
+export default function InfoSection({ bg = "light" }: { bg?: "light" | "dark" }) {
+
+  const isDark = bg === "dark";
   return (
-    <div className="relative bg-[#EBF3FF] text-center px-6 py-20  mx-auto overflow-hidden">
+    <div  className={`relative text-center px-6 py-20 mx-auto overflow-hidden rounded-xl ${
+      isDark ? "bg-[#0c0e2c] text-white" : "bg-[#EBF3FF] text-gray-800"
+    }`}>
       <div className="absolute left-0 top-0 w-1/2 h-full hidden sm:block">
         <img
           src="/white.png"
