@@ -12,7 +12,7 @@ export default function Newsletter({ bg = "dark" }: { bg?: "light" | "dark" }) {
 
   return (
     <div
-      className={`px-6 py-16 rounded-xl text-center max-w-6xl mx-auto mb-20 relative overflow-hidden ${
+      className={`px-6 py-16 text-center w-full py-20 px-6 relative overflow-hidden ${
         isDark ? "bg-[#0c0e2c] text-white" : "bg-[#EBF3FF] text-gray-900"
       }`}
     >
@@ -22,7 +22,7 @@ export default function Newsletter({ bg = "dark" }: { bg?: "light" | "dark" }) {
         className="absolute right-55 bottom-10 w-30 h-30 opacity-70 hidden md:block sm:block"
       />
       <h3 className="text-5xl font-bold mb-6">
-        Never miss out our <span className="text-[#4f46e5]">latest news</span>
+        Never miss out our <span className="text-[#5152FB]">latest news</span>
       </h3>
       {submitted ? (
         <p className="text-sm">Thank you for subscribing!</p>
@@ -39,7 +39,7 @@ export default function Newsletter({ bg = "dark" }: { bg?: "light" | "dark" }) {
           />
           <button
             type="submit"
-            className="bg-[#4f46e5] hover:bg-blue-700 cursor-pointer text-white text-sm font-semibold px-8 py-3 rounded-full w-full sm:w-auto"
+            className="bg-[ #5152FB] hover:bg-blue-700 cursor-pointer text-white text-sm font-semibold px-8 py-3 rounded-full w-full sm:w-auto"
           >
             Sign up
           </button>

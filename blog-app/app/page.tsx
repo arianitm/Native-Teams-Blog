@@ -69,7 +69,7 @@ export default function HomePage() {
             alt="Spinner"
             className="absolute top-10 right-40 w-6 h-6 md:w-8 md:h-8 hidden sm:block"
           />
-          <p className="text-2xl text-blue-600 font-bold mt-4 mb-6">
+          <p className="text-2xl text-[#5152FB] font-bold mt-4 mb-6">
             Native Teams Blog
           </p>
 
@@ -87,7 +87,7 @@ export default function HomePage() {
           <p className="text-gray-500 text-center py-12">No posts found.</p>
         ) : (
           <>
-            <LatestPost post={latest} />
+            <LatestPost post={latest} category={selectedCategory} />
             <h1 className="text-2xl flex flex-left font-bold text-gray-800 pb-2 mb-6">
               {capitalizedCategory} Posts
             </h1>

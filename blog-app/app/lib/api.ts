@@ -8,12 +8,12 @@
 // }
 
 // export async function fetchArticles({
-//   category = '',
-//   q = '',
+//   category = "",
+//   q = "",
 //   page = 1,
-//   pageSize = 9
+//   pageSize = 9,
 // }: FetchParams): Promise<{ articles: Article[]; totalResults: number }> {
-//   const API_KEY = 'c9406e28bcf844599394e986ac9a3bb7';
+//   const API_KEY = "c9406e28bcf844599394e986ac9a3bb7";
 
 //   let url = `https://newsapi.org/v2/top-headlines?country=us&page=${page}&pageSize=${pageSize}&apiKey=${API_KEY}`;
 //   if (category) url += `&category=${category}`;
@@ -23,8 +23,6 @@
 //   if (!res.ok) throw new Error("Failed to fetch");
 //   return res.json();
 // }
-
-
 
 // needed mock data for test purpuse because newsApi doesn't have unlimited request
 import { Article } from "../types";
@@ -38,8 +36,8 @@ interface FetchParams {
 }
 
 export async function fetchArticles({
-  category = '',
-  q = '',
+  category = "",
+  q = "",
   page = 1,
   pageSize = 9,
 }: FetchParams): Promise<{ articles: Article[]; totalResults: number }> {
@@ -48,9 +46,10 @@ export async function fetchArticles({
 
   // Optional: filter by search query
   if (q) {
-    articles = articles.filter(article =>
-      article.title.toLowerCase().includes(q.toLowerCase()) ||
-      article.description?.toLowerCase().includes(q.toLowerCase())
+    articles = articles.filter(
+      (article) =>
+        article.title.toLowerCase().includes(q.toLowerCase()) ||
+        article.description?.toLowerCase().includes(q.toLowerCase())
     );
   }
 
@@ -63,4 +62,3 @@ export async function fetchArticles({
     totalResults: articles.length,
   };
 }
-

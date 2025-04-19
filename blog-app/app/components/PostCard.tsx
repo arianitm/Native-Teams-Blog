@@ -12,7 +12,6 @@ export default function PostCard({
 }) {
   return (
     <div className="bg-white border border-gray-200 hover:shadow-lg p-5 rounded-xl transition-all duration-200 flex flex-col h-full">
-      
       {/* 📸 Image container - always occupies space */}
       <div className="w-full h-40 mb-3 rounded-md overflow-hidden bg-gray-100 flex items-center justify-center">
         {post.urlToImage ? (
@@ -27,7 +26,7 @@ export default function PostCard({
       </div>
 
       {/* 📄 Content */}
-      <span className="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded-full w-max mb-2">
+      <span className="bg-[#5152FB] text-white text-xs font-semibold px-2 py-1 rounded-full w-max mb-2">
         6 min read
       </span>
       <h3 className="text-left font-semibold text-gray-900 leading-tight mb-2 flex-1">
@@ -35,7 +34,7 @@ export default function PostCard({
       </h3>
       <Link
         href={`/post/${idx}?category=${category}`}
-        className="text-blue-600 text-sm font-medium flex items-center gap-1"
+        className="text-[#5152FB] text-sm font-medium flex items-center gap-1"
       >
         Read more <img src="/vector.svg" className="w-2 ml-2" />
       </Link>

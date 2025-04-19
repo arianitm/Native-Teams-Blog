@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ export default function Header() {
       {/* Logo */}
       <Link href={`/`}>
         <img
-          src="/default.png"
+          src="/default.svg"
           alt="Native Teams Logo"
           className="h-8 w-auto"
         />
@@ -18,10 +18,10 @@ export default function Header() {
 
       {/* Desktop Nav */}
       <nav className="hidden md:flex gap-4">
-        <a href="#" className="text-blue-700 font-medium">
+        <a href="#" className="text-black-700 font-medium">
           Links Group 1
         </a>
-        <a href="#" className="text-blue-700 font-medium">
+        <a href="#" className="text-black-700 font-medium">
           Links Group 2
         </a>
       </nav>
@@ -29,7 +29,7 @@ export default function Header() {
       {/* Desktop CTA */}
       <a
         href="#"
-        className="hidden md:inline-block bg-blue-700 text-white px-4 py-2 rounded-full"
+        className="hidden md:inline-block bg-[#5152FB] text-white px-4 py-2 rounded-full"
       >
         Get started
       </a>

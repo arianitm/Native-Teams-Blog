@@ -24,7 +24,7 @@ export default function SearchBar() {
         />
         <button
           type="submit"
-          className="bg-[#4f46e5] hover:bg-blue-700 text-white cursor-pointer text-sm font-semibold px-8 py-3 rounded-full w-full sm:w-auto"
+          className="bg-[#5152FB] hover:bg-blue-700 text-white cursor-pointer text-sm font-semibold px-8 py-3 rounded-full w-full sm:w-auto"
         >
           Search
         </button>
