@@ -30,7 +30,7 @@ export default function LatestPost({
         <p className="text-gray-700 text-sm md:text-base">{post.description}</p>
         <Link
           href={`/post/0?category=${category}`}
-          className="text-[# #5152FB] font-semibold text-sm hover:underline flex items-center gap-1"
+          className="text-[#5152FB] text-sm hover:underline flex items-center gap-1"
         >
           Read more <img src="/vector.svg" className="w-2 ml-1" />
         </Link>

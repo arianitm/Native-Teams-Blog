@@ -1,5 +1,6 @@
 import { fetchArticles } from "@/app/lib/api";
 import InfoSection from "@/app/components/InfoSection";
+import Loader from "@/app/components/Loader";
 interface Props {
   params: { id: string };
   searchParams: { category: string };
@@ -12,9 +13,7 @@ export default async function PostPage({ params, searchParams }: Props) {
   const article = data.articles[id];
 
   if (!article) {
-    return (
-      <div className="text-center py-20 text-gray-500">Post not found.</div>
-    );
+    return <Loader />;
   }
 
   return (
